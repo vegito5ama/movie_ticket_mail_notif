@@ -4,6 +4,6 @@ date = '04' #change to date for search
 
 email_notif_receiver = 'cs9769@srmist.edu.in' #change to email you want the notification mail sent to
 
-mail_message = "Subject: Dune Part Two IMAX Chennai\n\nThe date 04 is available now!" #set your custom mail contents
+mail_message = "Subject:  Dune Part Two IMAX Chennai\n\nThe date 04 is available now!" #set your custom mail contents
 
 loop_time = 600 #recheck time in seconds
