@@ -12,12 +12,10 @@ def send_email(receiver_email):
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, receiver_email, mail_message)
 
-def check_website():
-    url = book_my_show_link
-    
+def check_website(url):
     driver = webdriver.Chrome('chromedriver.exe')
     driver.get(url)
-    
+
     wait = WebDriverWait(driver, 20)
     date_numeric_div = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "date-numeric")))
     
@@ -32,7 +30,7 @@ def check_website():
 
 def main():
     while True:
-        if check_website():
+        if check_website(book_my_show_link):
             send_email(email_notif_receiver)
             break
         time.sleep(loop_time)
